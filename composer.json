@@ -1,0 +1,31 @@
+{
+    "name": "dmn-laramod/administrator-module",
+    "description": "",
+    "type": "laravel-module",
+    "authors": [
+        {
+            "name": "dc",
+            "email": "damnyan@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Administrator\\": "app/",
+            "Modules\\Administrator\\Database\\Factories\\": "database/factories/",
+            "Modules\\Administrator\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Administrator\\Tests\\": "tests/"
+        }
+    }
+}
