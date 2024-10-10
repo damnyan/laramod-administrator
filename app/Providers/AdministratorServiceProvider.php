@@ -78,6 +78,9 @@ class AdministratorServiceProvider extends ServiceProvider
     {
         $this->publishes([module_path($this->name, 'config/config.php') => config_path($this->nameLower.'.php')], 'config');
         $this->mergeConfigFrom(module_path($this->name, 'config/config.php'), $this->nameLower);
+
+        $this->mergeConfigFrom(module_path($this->name, 'config/auth_guards.php'), 'auth.guards');
+        $this->mergeConfigFrom(module_path($this->name, 'config/auth_providers.php'), 'auth.providers');
     }
 
     /**
